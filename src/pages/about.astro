@@ -1,71 +1,50 @@
 ---
+import page from '../layouts/page.astro';
 import "../styles/global.css";
-import { Icon } from 'astro-iconify'
+import { Icon } from 'astro-iconify';
+import Layout from "../layouts/page.astro"
+import Header from '../components/Header.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Kristian Huisman | Software Developer</title>
-	</head>
-	<body class="bg-gray-50">
-		<nav class=" flex items-center justify-between px-15 bg-gray-50 ">
-			<div class="flex items-center">
-				<a href="/"><span class="text-2xl font-extrabold text-gray-900 tracking-tight rounded px-3 py-1 ">KH</span></a>
-			</div>
-			<nav aria-label="Breadcrumb">
-				<ol class="flex space-x-2 text-gray-600 text-base">
-					<li>
-						<a href="/about" class="hover:text-gray-900 transition font-medium">About</a>
-					</li>
-					<li>
-						<span class="mx-1 text-gray-400">/</span>
-					</li>
-					<li>
-						<a href="#work" class="hover:text-gray-900 transition font-medium">Work</a>
-					</li>
-					<li>
-						<span class="mx-1 text-gray-400">/</span>
-					</li>
-					<li>
-						<a href="#contact" class="hover:text-gray-900 transition font-medium">Contact</a>
-					</li>
-				</ol>
-			</nav>
-		</nav>
+<Layout>
+  <Header />
 
 <main class="max-w-3xl mx-auto mt-16 px-6">
   <section class="mb-12">
     <h1 class="text-3xl font-bold text-gray-900 mb-4">About Me</h1>
     <p class="text-lg text-gray-700 leading-relaxed">
-      Hi, I'm Kristian Huisman, a passionate software developer focused on building clean, efficient, and user-friendly web applications. I enjoy working with modern technologies and am always eager to learn and take on new challenges.
+      Hi, I'm Kristian Huisman, a 19 year old Student Software Developer based in the Netherlands. My journey in software development began in 2022 at the Technova College in Ede. And since then i have build various clean, efficient, and user-friendly web applications using various technologies.
     </p>
   </section>
 
   <section>
     <h2 class="text-2xl font-semibold text-gray-900 mb-4">Tech Stack</h2>
     <ul class="flex flex-wrap gap-4">
+        <li class="flex items-center bg-white rounded shadow px-4 py-2">
+          <Icon name="logos:html-5" class="w-6 h-6 mr-2" />
+        </li>
+        <li class="flex items-center bg-white rounded shadow px-4 py-2">
+          <Icon name="logos:css-3" class="w-6 h-6 mr-2" />
+        </li>
+        <li class="flex items-center bg-white rounded shadow px-4 py-2">
+        <Icon name="logos:tailwindcss-icon" class="w-6 h-6 mr-2" />
+      </li>
       <li class="flex items-center bg-white rounded shadow px-4 py-2">
         <Icon name="logos:javascript" class="w-6 h-6 mr-2" />
       </li>
       <li class="flex items-center bg-white rounded shadow px-4 py-2">
-        <Icon name="logos:laravel" class="w-6 h-6 mr-2" />
+        <Icon name="logos:php" class="w-6 h-6 mr-2" />
       </li>
       <li class="flex items-center bg-white rounded shadow px-4 py-2">
         <Icon name="logos:react" class="w-6 h-6 mr-2" />
       </li>
       <li class="flex items-center bg-white rounded shadow px-4 py-2">
+        <Icon name="logos:laravel" class="w-6 h-6 mr-2" />
+      </li>
+       <li class="flex items-center bg-white rounded shadow px-4 py-2">
         <Icon name="logos:astro-icon" class="w-6 h-6 mr-2" />
       </li>
-      <li class="flex items-center bg-white rounded shadow px-4 py-2">
-        <Icon name="logos:tailwindcss-icon" class="w-6 h-6 mr-2" />
-      </li>
-      <li class="flex items-center bg-white rounded shadow px-4 py-2">
-        <Icon name="logos:php" class="w-6 h-6 mr-2" />
-      </li>
+      
       <li class="flex items-center bg-white rounded shadow px-4 py-2">
         <Icon name="logos:docker-icon" class="w-6 h-6 mr-2" />
       </li>
@@ -75,6 +54,5 @@ import { Icon } from 'astro-iconify'
     </ul>
   </section>
 </main>
-
-	</body>
-</html>
+</Layout>
+    
